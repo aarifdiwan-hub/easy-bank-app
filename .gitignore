@@ -1,0 +1,5 @@
+.idea/*
+accounts/.gitattributes
+cards/.gitattributes
+loans/.gitattributes
+loans/.mvn/wrapper/maven-wrapper.properties

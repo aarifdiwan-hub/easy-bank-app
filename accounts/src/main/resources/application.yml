@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: accounts
+  port: 8080
+  datasource:
+    url: jdbc:h2:mem:accounts
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+
