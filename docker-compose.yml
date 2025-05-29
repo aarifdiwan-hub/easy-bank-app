@@ -1,0 +1,39 @@
+services:
+    accounts:
+      image: accounts:v1
+      container_name: accounts-ms
+      ports:
+        - "8080:8080"
+      deploy:
+        resources:
+          limits:
+            memory: 100m
+      networks:
+        - nw-bank
+
+    cards:
+      image: cards:v1
+      container_name: cards-ms
+      ports:
+        - "9000:9000"
+      deploy:
+        resources:
+          limits:
+            memory: 100m
+      networks:
+        - nw-bank
+
+    loans:
+      image: loans:v1
+      container_name: loans-ms
+      ports:
+        - "8090:8090"
+      deploy:
+        resources:
+          limits:
+            memory: 100m
+      networks:
+        - nw-bank
+networks:
+  nw-bank:
+      driver: "bridge"
